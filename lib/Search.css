@@ -1,0 +1,34 @@
+.welcome {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.welcome h1 {
+  font-size: 4.5em;
+}
+
+.welcome div {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.welcome input {
+  border: 1px solid black;
+  font-size: 1.5em;
+  height: 60px;
+  padding-left: 10px;
+  width: 70%;
+}
+
+.welcome button {
+  background: none;
+  border: 1px solid black;
+  border-left: none;
+  font-size: 1em;
+  height: 64.5px;
+  width: 15%;
+}
