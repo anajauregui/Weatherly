@@ -1,0 +1,13 @@
+.welcome-background {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  z-index: -1000;
+}
+
+.backgound-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
