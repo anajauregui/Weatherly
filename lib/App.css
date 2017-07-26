@@ -1,8 +1,11 @@
+#app {
+  width: 100%;
+}
 
 body {
   align-items: center;
   /*background-image: url('http://imgur.com/a/lKS2R');*/
-  background-image: url('http://www.wallcoo.net/cartoon/abstract_colors_2560x1600_0902/images/abstract_colors_Destiny-Islands---morning.jpg');
+  background-image: url('http://i.imgur.com/AgoEHWA.png');
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
