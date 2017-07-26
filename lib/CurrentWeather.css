@@ -59,7 +59,7 @@ hr {
 .high-low {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 43%;
 }
 
 .high,
@@ -67,10 +67,11 @@ hr {
   font-size: 3em;
 }
 
-/*.high span,
+.high span,
 .low span {
-  font-size: 2em;
-}*/
+  font-size: .7em;
+}
+
 .weather-sum {
   font-size: 2em;
 }
