@@ -1,8 +1,10 @@
+
 body {
   align-items: center;
-  background-image: url('http://www.wallcoo.net/cartoon/abstract_colors_2560x1600_0902/images/abstract_colors_Destiny-Islands---morning.jpg')
+  background-image: url('http://www.wallcoo.net/cartoon/abstract_colors_2560x1600_0902/images/abstract_colors_Destiny-Islands---morning.jpg');
   display: flex;
   flex-direction: column;
   height: 100vh;
+  width: 100%;
   justify-content: center;
 }
