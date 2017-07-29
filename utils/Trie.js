@@ -42,6 +42,7 @@ export default class Trie {
     const wordsArray = [...prefix];
 
     const suggestions = [];
+console.log(suggestions);
 
     let currentNode = this.root;
 
@@ -87,7 +88,6 @@ export default class Trie {
 
     for (let i = 0; i < wordsArray.length; i++) {
       currentNode = currentNode.children[wordsArray[i]]
-      console.log('current node', currentNode);
     }
     currentNode.frequency++
     currentNode.timeStamp = Date.now();

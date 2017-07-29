@@ -5,9 +5,11 @@
 body {
   align-items: center;
   /*background-image: url('http://imgur.com/a/lKS2R');*/
-  background-image: url('http://i.imgur.com/AgoEHWA.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  /*background-image: url('http://i.imgur.com/AgoEHWA.png');*/
+  /*background-repeat: no-repeat;*/
+  /*background-size: cover;*/
+  color: #fff;
+  background-color: #029bf1;
   display: flex;
   flex-direction: column;
   height: 100vh;
