@@ -14,23 +14,3 @@
   justify-content: center;
   width: 100%;
 }
-
-.welcome input,
-.welcome button {
-  background: rgba(96, 96, 96, 0.4);
-  border: 1px solid #979797;
-  color: #fff;
-  font-size: 1.7em;
-  height: 60px;
-  outline: none;
-  padding-left: 10px;
-  width: 70%;
-}
-
-.welcome button {
-  background: rgba(56, 56, 56, 0.6);
-  border-left: none;
-  font-size: 1.3em;
-  height: 64px;
-  width: 15%;
-}
