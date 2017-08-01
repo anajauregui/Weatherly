@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import App from '../Components/Search';
+import Search from '../lib/Components/Search';
 
 describe('App', () => {
   let wrapper;
@@ -9,10 +9,9 @@ describe('App', () => {
     wrapper = shallow(<Search />)
   })
 
-  // afterEach(() => {
-  //   localStorage.clear()
-  // })
-
   it('should exist', () => {
     expect(wrapper).toBeDefined()
   })
+
+  it('should render')
+});
