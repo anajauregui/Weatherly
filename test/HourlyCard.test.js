@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import App from '../Components/HourlyCard';
+import HourlyCard from '../lib/Components/HourlyCard';
 
-describe('App', () => {
+describe('HourlyCard', () => {
   let wrapper;
 
   beforeEach(() => {
