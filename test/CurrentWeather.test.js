@@ -10,7 +10,6 @@ describe('CurrentWeather', () => {
   beforeEach(() => {
     mockFn = jest.fn()
 
-
     wrapper = shallow(<CurrentWeather
       getNewLocation={mockFn}
       getApi={mockFn}
