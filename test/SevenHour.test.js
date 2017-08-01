@@ -1,18 +1,34 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import App from '../Components/SevenHour';
+import SevenHour from '../lib/Components/SevenHour';
+import weatherData from '../test_helpers/mockData.js';
+import HourlyCard from '../lib/Components/HourlyCard'
 
-describe('App', () => {
+describe('SevenHour', () => {
   let wrapper;
 
-  beforeEach(() => {
-    wrapper = shallow(<SevenHour />)
+const hourCards = (weatherData.hourly_forecast || []).map( (hour, i) => {
+    if (i < 7) {
+      return <HourlyCard temp={hour.temp.english} time={hour.FCTTIME.civil} img={hour.icon_url} key={hour.FCTTIME.civil} />
+    }
   })
 
-  // afterEach(() => {
-  //   localStorage.clear()
-  // })
+  beforeEach(() => {
+    wrapper = shallow(
+      <SevenHour>
+        {hourCards}
+      </SevenHour>
+    )
+  })
 
   it('should exist', () => {
     expect(wrapper).toBeDefined()
   })
+
+  it('should render 7 hourly weather cards', () => {
+    expect(wrapper.find("HourlyCard").length).toEqual(7);
+    expect(wrapper.find("HourlyCard")).toBeDefined();
+  })
+
+
+})
