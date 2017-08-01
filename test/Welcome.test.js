@@ -1,18 +1,30 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import App from '../Components/Welcome';
+import Welcome from '../lib/Components/Welcome';
+import weatherData from '../test_helpers/mockData';
 
-describe('App', () => {
+describe('Welcome', () => {
   let wrapper;
+  let mockFn;
 
   beforeEach(() => {
-    wrapper = shallow(<Welcome />)
-  })
+    mockFn = jest.fn()
 
-  // afterEach(() => {
-  //   localStorage.clear()
-  // })
+    wrapper = shallow(<Welcome getApi={mockFn}/>)
+  })
 
   it('should exist', () => {
     expect(wrapper).toBeDefined()
   })
+
+  it('should render h1', () => {
+    expect(wrapper.find("h1")).toBeDefined();
+    expect(wrapper.find("h1").text()).toEqual("Welcome, Choose a City");
+  })
+
+  it('should render Search component', () => {
+    expect(wrapper.find("Search").length).toEqual(1);
+    expect(wrapper.find("Search")).toBeDefined();
+  })
+
+})

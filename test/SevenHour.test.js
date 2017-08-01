@@ -4,16 +4,20 @@ import SevenHour from '../lib/Components/SevenHour';
 import weatherData from '../test_helpers/mockData.js';
 import HourlyCard from '../lib/Components/HourlyCard'
 
+
+
 describe('SevenHour', () => {
   let wrapper;
 
-const hourCards = (weatherData.hourly_forecast || []).map( (hour, i) => {
+  const hourCards = (weatherData.hourly_forecast || []).map( (hour, i) => {
+
     if (i < 7) {
       return <HourlyCard temp={hour.temp.english} time={hour.FCTTIME.civil} img={hour.icon_url} key={hour.FCTTIME.civil} />
     }
   })
 
   beforeEach(() => {
+
     wrapper = shallow(
       <SevenHour>
         {hourCards}
@@ -22,6 +26,7 @@ const hourCards = (weatherData.hourly_forecast || []).map( (hour, i) => {
   })
 
   it('should exist', () => {
+
     expect(wrapper).toBeDefined()
   })
 
@@ -29,6 +34,4 @@ const hourCards = (weatherData.hourly_forecast || []).map( (hour, i) => {
     expect(wrapper.find("HourlyCard").length).toEqual(7);
     expect(wrapper.find("HourlyCard")).toBeDefined();
   })
-
-
 })

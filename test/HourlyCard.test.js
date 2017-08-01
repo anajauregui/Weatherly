@@ -3,6 +3,7 @@ import { shallow, mount } from 'enzyme';
 import HourlyCard from '../lib/Components/HourlyCard';
 import weatherData from '../test_helpers/mockData.js';
 
+
 describe('HourlyCard', () => {
   let wrapper;
 
