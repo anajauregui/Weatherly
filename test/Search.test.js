@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Search from '../lib/Components/Search';
 
-describe('App', () => {
+describe('Search', () => {
   let wrapper;
 
   beforeEach(() => {
@@ -13,5 +13,8 @@ describe('App', () => {
     expect(wrapper).toBeDefined()
   })
 
-  it('should render')
+  it('should render an input field with className city-search', () => {
+
+  })
+
 });
