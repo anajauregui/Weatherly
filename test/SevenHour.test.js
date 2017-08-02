@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import SevenHour from '../lib/Components/SevenHour';
 import weatherData from '../test_helpers/mockData.js';
-import HourlyCard from '../lib/Components/HourlyCard'
+import HourlyCard from '../lib/Components/HourlyCard';
 
 describe('SevenHour', () => {
   let wrapper;

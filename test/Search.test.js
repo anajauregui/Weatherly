@@ -36,15 +36,13 @@ describe('Search', () => {
   });
 
   it.skip('should change set location in state on button click', () => {
-
     const inputBox = wrapper.find('.city-search');
-
     const submitButton = wrapper.find('.sub-btn');
 
     inputBox.simulate('keydown', { which: 'a' });
     submitButton.simulate('click');
     expect(wrapper.find('.city-search')).toBeDefined();
-    expect(wrapper.instance().state.location).toEqual('a')
+    expect(wrapper.instance().state.location).toEqual('a');
   });
 
   it('should create a new instance of Trie on mount', () => {
@@ -54,7 +52,7 @@ describe('Search', () => {
         letter: null,
         isWord: false,
         children: expect.objectContaining({}),
-      })
-    }))
+      }),
+    }));
   });
 });
