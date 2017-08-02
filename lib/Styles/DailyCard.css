@@ -1,17 +1,25 @@
 .daily-weather {
-  border: 5px solid #fff;
+  border: .5px solid #fff;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height:135px;
   width: 150px;
 }
 
+.daily-weather p {
+  margin: 0;
+}
+
 .projected-weather-pic {
   height: 50px;
+  margin: 10px;
   width: 50px;
 }
 
 .tenDay-high-low {
   display: flex;
   justify-content: space-around;
+  width: 100%
 }
