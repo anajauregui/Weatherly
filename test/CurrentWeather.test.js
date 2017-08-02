@@ -9,25 +9,26 @@ describe('CurrentWeather', () => {
 
   beforeEach(() => {
     mockFn = jest.fn()
+    let forecast = weatherData.forecast.simpleforecast.forecastday[0]
 
     wrapper = shallow(<CurrentWeather
       getNewLocation={mockFn}
       getApi={mockFn}
       place={weatherData.current_observation.display_location.full}
+      currentWeatherImg={weatherData.current_observation.icon_url}
       condition={weatherData.current_observation.weather}
-      day={weatherData.forecast.simpleforecast.forecastday[0].date.weekday}
-      dateMonth={weatherData.forecast.simpleforecast.forecastday[0].date.month}
-      dateDay={weatherData.forecast.simpleforecast.forecastday[0].date.day}
-      dateYear={weatherData.forecast.simpleforecast.forecastday[0].date.year}
+      day={forecast.date.weekday}
+      dateMonth={forecast.date.month}
+      dateDay={forecast.date.day}
+      dateYear={forecast.date.year}
       temp={weatherData.current_observation.temp_f}
-      highT={weatherData.forecast.simpleforecast.forecastday[0].high.fahrenheit}
-      lowT={weatherData.forecast.simpleforecast.forecastday[0].low.fahrenheit}
+      highT={forecast.high.fahrenheit}
+      lowT={forecast.low.fahrenheit}
       summary={weatherData.forecast.txt_forecast.forecastday[0].fcttext}
       />)
   })
 
   it('should exist', () => {
-
     expect(wrapper).toBeDefined()
   })
 
@@ -41,9 +42,9 @@ describe('CurrentWeather', () => {
     expect(wrapper.find('.current-city').props().children).toEqual("Denver, CO")
   })
 
-  it.skip('should render an img to the DOM', () => {
-    expect(wrapper.find('img')).toBeDefined();
-    expect(wrapper.find('img').props().children).toEqual("Denver, CO")
+  it('should render an img to the DOM', () => {
+    expect(wrapper.find('.weth-img')).toBeDefined();
+    expect(wrapper.find('.weth-img').prop('src')).toBe('http://icons.wxug.com/i/c/k/clear.gif')
   })
 
   it('should render an h4 with a className of weather-desc', () => {
@@ -61,19 +62,19 @@ describe('CurrentWeather', () => {
     expect(wrapper.find('.date').text()).toEqual("8/1/2017")
   })
 
-  it.skip('should render an h1 with a className of current-temp', () => {
+  it('should render an h1 with a className of current-temp', () => {
     expect(wrapper.find('.current-temp')).toBeDefined();
-    expect(wrapper.find('.current-temp').text()).toEqual([83, "&#8457;"])
+    expect(wrapper.find('.current-temp').text()).toEqual("83 ℉")
   })
 
-  it.skip('should render a p with a className of high', () => {
+  it('should render a p with a className of high', () => {
     expect(wrapper.find('.high')).toBeDefined();
-    expect(wrapper.find('.high').text()).toEqual()
+    expect(wrapper.find('.high').text()).toEqual("High: 87 ℉")
   })
 
-  it.skip('should render a p with a className of low', () => {
+  it('should render a p with a className of low', () => {
     expect(wrapper.find('.low')).toBeDefined();
-    expect(wrapper.find('.low').text()).toEqual()
+    expect(wrapper.find('.low').text()).toEqual("Low: 63 ℉")
   })
 
   it('should render a p with a className of weather-sum', () => {
