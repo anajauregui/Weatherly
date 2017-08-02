@@ -15,9 +15,8 @@ describe('TenDay', () => {
 
   beforeEach(() => {
     wrapper = shallow(
-      <TenDay>
-        {dayCards}
-      </TenDay>)
+      <TenDay dailyForecast={weatherData.forecast.simpleforecast.forecastday} />
+    )
   })
 
 
