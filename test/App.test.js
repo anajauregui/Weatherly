@@ -19,6 +19,9 @@ describe('App', () => {
   });
 
   it('should render the CurrentWeather component', () => {
+
+    expect(wrapper.find('CurrentWeather').length).toEqual(0);
+
     wrapper.setState({
       ready: true,
       weatherData: {
@@ -35,6 +38,7 @@ describe('App', () => {
   });
 
   it('should render the SevenHour component', () => {
+    expect(wrapper.find('CurrentWeather').length).toEqual(0);
     wrapper.setState({
       ready: true,
       weatherData: {
@@ -51,6 +55,7 @@ describe('App', () => {
   });
 
   it('should render the TenDay component', () => {
+    expect(wrapper.find('CurrentWeather').length).toEqual(0);
     wrapper.setState({
       ready: true,
       weatherData: {

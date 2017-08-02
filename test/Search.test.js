@@ -46,7 +46,8 @@ describe('Search', () => {
   });
 
   it('should create a new instance of Trie on mount', () => {
-    wrapper.instance().componentDidMount();
+    wrapper = mount(<Search getApi={mockFn} />)
+
     expect(wrapper.instance().trie).toEqual(expect.objectContaining({
       root: expect.objectContaining({
         letter: null,
