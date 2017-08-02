@@ -1,6 +1,5 @@
-// import React from 'react';
+import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { expect, jest } from 'jest';
 import DailyCard from '../lib/Components/DailyCard';
 import weatherData from '../test_helpers/mockData';
 
@@ -26,10 +25,9 @@ describe('DailyCard', () => {
     expect(wrapper.find('.day').text()).toEqual('Tuesday');
   });
 
-  it.skip('should render an image displaying the current weather', () => {
-    console.log(wrapper.find('.projected-weather-pic').debug());
+  it('should render an image displaying the current weather', () => {
     expect(wrapper.find('.projected-weather-pic')).toBeDefined();
-    expect(wrapper.find('.projected-weather-pic').text()).toEqual(<img className="projected-weather-pic" src="http://icons.wxug.com/i/c/k/clear.gif" />);
+    expect(wrapper.find('.projected-weather-pic').prop('src')).toEqual("http://icons.wxug.com/i/c/k/clear.gif");
   });
 
   it('should render a <p> tag with a className high-temp', () => {

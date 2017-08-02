@@ -1,6 +1,5 @@
-// import React from 'react';
+import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { expect, jest } from 'jest';
 import TenDay from '../lib/Components/TenDay';
 import weatherData from '../test_helpers/mockData';
 import DailyCard from '../lib/Components/DailyCard';
