@@ -1,10 +1,23 @@
 .hourly-weather {
-  border: 5px solid #fff;
+  align-items: center;
+  border: .5px solid #fff;
+  display: flex;
+  flex-direction: column;
   height: 135px;
+  justify-content: center;
   width: 150px;
 }
 
 .hourly-weather-pic {
   height: 50px;
+  margin: 10px;
   width: 50px;
+}
+
+.hour-temp {
+  margin: 5px;
+}
+
+.hour {
+  margin: 5px;
 }
