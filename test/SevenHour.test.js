@@ -19,9 +19,7 @@ describe('SevenHour', () => {
   beforeEach(() => {
 
     wrapper = shallow(
-      <SevenHour>
-        {hourCards}
-      </SevenHour>
+      <SevenHour hourlyForecast={weatherData.hourly_forecast}/>
     )
   })
 
