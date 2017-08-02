@@ -1,6 +1,5 @@
-// import React from 'react';
+import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { expect, jest } from 'jest';
 import Search from '../lib/Components/Search';
 
 describe('Search', () => {
@@ -29,14 +28,33 @@ describe('Search', () => {
   it('should call getVal when button is clicked', () => {
     mockFn = jest.fn();
 
-    wrapper.instance().getVal = mockFn;
-    wrapper.update();
     const submitButton = wrapper.find('.sub-btn');
+
+    wrapper.instance().getVal = mockFn;
     submitButton.simulate('click');
     expect(mockFn).toHaveBeenCalled;
   });
 
-  it('should change state on button click', () => {
-    mockFn = jest.fn();
+  it.skip('should change set location in state on button click', () => {
+
+    const inputBox = wrapper.find('.city-search');
+
+    const submitButton = wrapper.find('.sub-btn');
+
+    inputBox.simulate('keydown', { which: 'a' });
+    submitButton.simulate('click');
+    expect(wrapper.find('.city-search')).toBeDefined();
+    expect(wrapper.instance().state.location).toEqual('a')
+  });
+
+  it('should create a new instance of Trie on mount', () => {
+    wrapper.instance().componentDidMount();
+    expect(wrapper.instance().trie).toEqual(expect.objectContaining({
+      root: expect.objectContaining({
+        letter: null,
+        isWord: false,
+        children: expect.objectContaining({}),
+      })
+    }))
   });
 });
