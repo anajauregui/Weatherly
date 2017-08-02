@@ -1,6 +1,5 @@
-// import React from 'react';
+import React from 'react';
 import { shallow, mount } from 'enzyme';
-import { expect, jest } from 'jest';
 import CurrentWeather from '../lib/Components/CurrentWeather';
 import weatherData from '../test_helpers/mockData';
 

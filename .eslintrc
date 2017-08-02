@@ -10,6 +10,12 @@
     "quotes": [2, "single"],
     "eol-last": [0],
     "no-mixed-requires": [0],
-    "no-underscore-dangle": [0]
+    "no-underscore-dangle": [0],
+    "no-undef":[0],
+    "no-unused-vars": [0],
+    "max-len": [0],
+    "array-callback-return": [0],
+    "no-unused-expressions": [0],
+    "consistent-return": [0],
   }
 }

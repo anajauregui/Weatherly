@@ -76,5 +76,6 @@ hr {
 
 .weather-sum {
   font-size: 2em;
-  margin-top: 15px;
+  margin: 30px 0;
+  width: 80%;
 }
